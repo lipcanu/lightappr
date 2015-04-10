@@ -15,6 +15,7 @@ module.exports = function (grunt) {
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   // Configurable paths
   var config = {
@@ -51,6 +52,10 @@ module.exports = function (grunt) {
       styles: {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
+      },
+      less: {
+        files: ['<%= config.app %>/styles/{,*/}*.less'],
+        tasks: ['less']
       },
       livereload: {
         options: {
@@ -141,6 +146,20 @@ module.exports = function (grunt) {
         options: {
           run: true,
           urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
+        }
+      }
+    },
+
+    less: {
+      dist: {
+        files: {
+          '<%= config.app %>/styles/main.css': ['<%= config.app %>/styles/main.less']
+        },
+        options: {
+          sourceMap: true,
+          sourceMapFilename: '<%= config.app %>/styles/main.css.map',
+          sourceMapBasepath: '<%= config.app %>/',
+          sourceMapRootpath: '/'
         }
       }
     },
@@ -323,7 +342,8 @@ module.exports = function (grunt) {
       dist: [
         'copy:styles',
         'imagemin',
-        'svgmin'
+        'svgmin',
+        'less'
       ]
     }
   });
@@ -340,6 +360,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'wiredep',
+      'less',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
@@ -370,6 +391,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
+    'less', 
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
