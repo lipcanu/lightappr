@@ -2,6 +2,7 @@
 
 @theme-primary: #674172;
 @theme-dark: #111111;
+@theme-light: #dcc6e0;
 
 // Mixins
 
@@ -162,7 +163,7 @@ aside {
                 text-transform: uppercase;
                 font-weight: 700;
                 font-size: 17px;
-                color: @theme-dark;
+                color: @theme-light;
                 &:hover {
                     color: @theme-primary;
                 }
@@ -180,7 +181,7 @@ aside {
         }
     }
     @media (min-width: 768px) {
-        background-color: transparent;
+        background-color: #252525;
         border-color: fade(white, 30%);
         .navbar-header .navbar-brand {
             color: fade(white, 70%);
@@ -197,8 +198,8 @@ aside {
             }
         }
         &.affix {
-            background-color: white;
-            border-color: fade(@theme-dark, 5%);
+            background-color: #252525;
+            border-color: fade(@theme-light, 5%);
             .navbar-header .navbar-brand {
                 color: @theme-primary;
                 font-size: 14px;
@@ -209,7 +210,7 @@ aside {
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: @theme-dark;
+                color: white;
                 &:hover {
                     color: @theme-primary;
                 }
@@ -231,12 +232,13 @@ header {
     color: white;
     .header-content {
         position: relative;
-        text-align: center;
+        text-align: right;
         padding: 100px 15px 100px;
-        width: 100%;
+        margin-left: 50%;
+        width: 50%;
         .header-content-inner {
             h1 {
-                
+                font-size: 16px !important;
                 margin-top: 0;
                 margin-bottom: 0;
             }
