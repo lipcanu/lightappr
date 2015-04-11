@@ -300,6 +300,42 @@ p.speech:after {
 .service-box p {
   margin-bottom: 0;
 }
+.socialIcon {
+  color: #674172;
+}
+#footer {
+  position: absolute;
+  width: 100%;
+}
+#footer h2 {
+  text-align: center;
+}
+#footer ul {
+  list-style-type: none;
+  margin-bottom: 25px;
+}
+#footer a {
+  /*text-decoration: underline;*/
+  font-size: 17px;
+}
+.copyright {
+  position: absolute;
+  bottom: 15px;
+  left: 38%;
+}
+.crystalLeft,
+.crystalRight {
+  position: absolute;
+  bottom: 0px;
+  z-index: 0;
+  width: 20%;
+}
+.crystalLeft {
+  left: 0px;
+}
+.crystalRight {
+  right: 0px;
+}
 .portfolio-box {
   position: relative;
   display: block;
