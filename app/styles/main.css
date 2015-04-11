@@ -34,7 +34,7 @@ h6 {
   text-transform: uppercase;
 }
 h2 {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 p {
   font-size: 20px;
@@ -65,7 +65,7 @@ aside {
   padding: 0;
 }
 .navbar-default {
-  background-color: white;
+  background-color: #252525;
   border-color: rgba(17, 17, 17, 0.05);
   font-family: 'Dosis', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.35s;
@@ -104,11 +104,11 @@ aside {
 }
 @media (min-width: 768px) {
   .navbar-default {
-    background-color: #252525;
+    background-color: transparent;
     border-color: rgba(255, 255, 255, 0.3);
   }
   .navbar-default .navbar-header .navbar-brand {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(37, 37, 37, 0.7);
   }
   .navbar-default .navbar-header .navbar-brand:hover,
   .navbar-default .navbar-header .navbar-brand:focus {
@@ -233,6 +233,11 @@ header #store {
 #slider {
   margin-bottom: 1em;
 }
+@media (min-width: 992px) {
+  #slider-thumbs {
+    margin-top: 1em;
+  }
+}
 .section-heading {
   margin-top: 0;
 }
@@ -315,7 +320,6 @@ p.speech:after {
   margin-bottom: 25px;
 }
 #footer a {
-  /*text-decoration: underline;*/
   font-size: 17px;
 }
 .copyright {
@@ -335,6 +339,28 @@ p.speech:after {
 }
 .crystalRight {
   right: 0px;
+}
+@media (min-width: 992px) {
+  #footer a {
+    font-size: 15px;
+    padding: 15px 0 !important;
+  }
+  .copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 25% !important;
+  }
+}
+@media (min-width: 768px) {
+  #footer a {
+    font-size: 13.5px !important;
+    padding: 20px 0 !important;
+  }
+  .copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 25%;
+  }
 }
 .portfolio-box {
   position: relative;
@@ -503,25 +529,25 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl {
   padding: 15px 30px;
 }
-::-moz-selection {
-  color: white;
-  text-shadow: none;
-  background: #111111;
+/*: : -moz-selection {
+    color: white;
+    text-shadow: none;
+    background: @theme-dark;
 }
-::selection {
-  color: white;
-  text-shadow: none;
-  background: #111111;
+: : selection {
+    color: white;
+    text-shadow: none;
+    background: @theme-dark;
 }
-img::selection {
-  color: white;
-  background: transparent;
+img: : selection {
+    color: white;
+    background: transparent;
 }
-img::-moz-selection {
-  color: white;
-  background: transparent;
+img: : -moz-selection {
+    color: white;
+    background: transparent;
 }
 body {
-  webkit-tap-highlight-color: #111111;
-}
+    webkit-tap-highlight-color: @theme-dark;
+}*/
 /*# sourceMappingURL=app/styles/main.css.map */
