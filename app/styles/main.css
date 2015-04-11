@@ -34,7 +34,7 @@ h6 {
   text-transform: uppercase;
 }
 p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -107,6 +107,9 @@ aside {
   .navbar-default .navbar-header .navbar-brand:focus {
     color: white;
   }
+  .navbar-default .navbar-brand {
+    padding: 8px 15px;
+  }
   .navbar-default .nav > li > a,
   .navbar-default .nav > li > a:focus {
     color: rgba(255, 255, 255, 0.7);
@@ -151,7 +154,7 @@ header {
 }
 header .header-content {
   position: relative;
-  text-align: right;
+  text-align: center;
   padding: 100px 15px 100px;
   margin-left: 50%;
   width: 50%;
@@ -168,7 +171,29 @@ header .header-content .header-content-inner p {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
-  margin-bottom: 50px;
+}
+header #amazuLogo {
+  width: 30%;
+}
+header #lappLogo {
+  width: 50%;
+  margin-bottom: 2em;
+}
+header #downloadLinks {
+  display: table;
+  width: 50%;
+  margin: 15px auto;
+}
+header #icon {
+  display: table-column;
+  width: 40%;
+  float: left;
+}
+header #store {
+  display: table-cell;
+  width: 60%;
+  float: left;
+  margin: 2px 0;
 }
 @media (min-width: 768px) {
   header {
