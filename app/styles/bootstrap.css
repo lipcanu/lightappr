@@ -6173,6 +6173,7 @@ button.close {
   top: 50%;
   z-index: 5;
   display: inline-block;
+  font-size: 30px;
 }
 .carousel-control .icon-prev,
 .carousel-control .glyphicon-chevron-left {

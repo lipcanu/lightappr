@@ -107,7 +107,9 @@ h6 {
     .sans-serif-font;
     text-transform: uppercase;
 }
-
+h2{
+    margin-bottom: 2em;
+}
 p {
     font-size: 20px;
     line-height: 1.5;
@@ -120,7 +122,11 @@ p {
 
 .bg-dark {
     background-color: @theme-dark;
-    color: white;
+    color: #F2F1EF;
+}
+.bg-light{
+    background-color: @theme-light;
+    color: @theme-dark;
 }
 
 .text-faded {
@@ -305,11 +311,67 @@ header {
 }
 
 // Sections
+.selected img {
+    opacity:0.5;
 
+}
+.item{
+    margin: 0 auto;
+}
+#slider{
+    margin-bottom: 1em;
+}
 .section-heading {
     margin-top: 0;
 }
+// speech box
 
+p.speech
+{
+    position: relative;
+    width: 250px;
+    height: 120px;
+    text-align: center;
+    /*line-height: 100px;*/
+    background-color: @theme-light;
+    border: 8px solid @theme-primary;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    margin: 20px auto;
+    padding: 5px;
+}
+
+p.speech:before
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 30px;
+    top: 104px;
+    border: 25px solid;
+    border-color: @theme-primary transparent transparent @theme-primary;
+}
+
+p.speech:after
+{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 38px;
+    top: 104px;
+    border: 15px solid;
+    border-color: @theme-light transparent transparent @theme-light;
+}
+.pressLogo{
+    width: 250px;
+    margin-top: 25px;
+}
+
+
+//speech box end 
 .service-box {
     max-width: 400px;
     margin: 50px auto 0;

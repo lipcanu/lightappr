@@ -33,6 +33,9 @@ h6 {
   font-family: 'Dosis', 'Helvetica Neue', Arial, sans-serif;
   text-transform: uppercase;
 }
+h2 {
+  margin-bottom: 2em;
+}
 p {
   font-size: 20px;
   line-height: 1.5;
@@ -43,7 +46,11 @@ p {
 }
 .bg-dark {
   background-color: #111111;
-  color: white;
+  color: #F2F1EF;
+}
+.bg-light {
+  background-color: #dcc6e0;
+  color: #111111;
 }
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
@@ -217,8 +224,55 @@ header #store {
     margin-right: auto;
   }
 }
+.selected img {
+  opacity: 0.5;
+}
+.item {
+  margin: 0 auto;
+}
+#slider {
+  margin-bottom: 1em;
+}
 .section-heading {
   margin-top: 0;
+}
+p.speech {
+  position: relative;
+  width: 250px;
+  height: 120px;
+  text-align: center;
+  /*line-height: 100px;*/
+  background-color: #dcc6e0;
+  border: 8px solid #674172;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  margin: 20px auto;
+  padding: 5px;
+}
+p.speech:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 30px;
+  top: 104px;
+  border: 25px solid;
+  border-color: #674172 transparent transparent #674172;
+}
+p.speech:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 38px;
+  top: 104px;
+  border: 15px solid;
+  border-color: #dcc6e0 transparent transparent #dcc6e0;
+}
+.pressLogo {
+  width: 250px;
+  margin-top: 25px;
 }
 .service-box {
   max-width: 400px;
